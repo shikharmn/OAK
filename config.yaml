@@ -1,0 +1,16 @@
+defaults:
+  - _self_
+
+base_dir: ""
+device: 0
+training_devices: [0, 1, 2, 3]
+clustering_devices:
+  [0, 1, 2, 3]
+wandb_project: OrganicBERT
+pred_mode: ova
+version: enter_your_version_here # Pass this in bash script as an override
+tokenizer_type: bert-base-uncased
+regularizer: True   # Turn off for NGAME
+retrieved_eval: True
+ngame: False
+test_mode: False
