@@ -1,9 +1,9 @@
-# OAK: Enriching Document Representations using Auxiliary Knowledge for Extreme Classification
-This is the codebase for the project Online Auxiliary Knowledge (OAK). Please refer to the preprint for technical details, this README will explain usage. Please reach out to shikharmohan@microsoft.com for any clarifications.
+# OAK: Enriching Document Representations using Auxiliary Knowledge for Extreme Classification (ICML '24)
+This is the codebase for the project Online Auxiliary Knowledge (OAK). Please refer to the publication for technical details, this README will explain usage. Please reach out to shikharmohan@microsoft.com for any clarifications.
 
-### Note for Clarity
-In Extreme Classification (XC) literature we retrieve **labels** for **documents**, which corresponds to retrieving **documents** from **queries** in the traditional Dense Retrieval context. This codebase will follow the documents->labels terminology. Furthermore, AKPs (individual Auxiliary Knowledge Pieces from the Knowledge Bank, refer to paper for more details) can be referred to as `titles` or `metadata` based on the setting and both are used interchangeably in the code.
-
+## Overview
+The objective in eXtreme Classification (XC) is to find relevant labels for a document from an exceptionally large label space. Most XC application scenarios have rich auxiliary data associated with the input documents, e.g., frequently clicked webpages for search queries in sponsored search. Unfortunately, most of the existing XC methods do not use any auxiliary data. In this paper, we propose a novel framework, Online Auxiliary Knowledge (OAK), which harnesses auxiliary information linked to the document to improve XC accuracy. OAK stores information learnt from the auxiliary data in a knowledge bank and during a forward pass, retrieves relevant auxiliary knowledge embeddings for a given document. An enriched embedding is obtained by fusing these auxiliary knowledge embeddings with the document's embedding, thereby enabling much more precise candidate label selection and final classification. OAK training involves three stages. (1) Training a linker module to link documents to relevant auxiliary data points. (2) Learning an embedding for documents enriched using linked auxiliary information. (3) Using the enriched document embeddings to learn the final classifiers. OAK outperforms current state-of-the-art XC methods by up to 
+∼5% on academic datasets, and by ∼3% on an auxiliary data-augmented variant of LF-ORCAS-800K dataset in Precision@1. OAK also demonstrates statistically significant improvements in sponsored search metrics when deployed on a large scale search engine.
 ## Requirements
 Use `oak.yml` to install the required libraries.
 
