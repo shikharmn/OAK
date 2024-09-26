@@ -1,4 +1,4 @@
-# OAK: Enriching Document Representations using Auxiliary Knowledge for Extreme Classification (ICML '24)
+# [OAK: Enriching Document Representations using Auxiliary Knowledge for Extreme Classification (ICML '24)](https://proceedings.mlr.press/v235/mohan24a.html)
 This is the codebase for the project Online Auxiliary Knowledge (OAK). Please refer to the publication for technical details, this README will explain usage. Please reach out to shikharmohan@microsoft.com for any clarifications.
 
 ## Overview
